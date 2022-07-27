@@ -1,10 +1,8 @@
 function success_function(response) {
     let count = 0;
     for (count = 0; count < response[`data`].length; count++) {
-        response[`data`][count][`title`] = `<h3> ${response[`data`][count][`title`]} </h3>`;
-        response[`data`][count][`body`] = `<p>${response[`data`][count][`body`]}</p>`;
-        console.log(response[`data`][count][`title`]);
-        console.log(response[`data`][count][`body`]);
+        info[`innerHTML`] += `<h3> ${response[`data`][count][`title`]} </h3>`;
+        info[`innerHTML`] += `<p>${response[`data`][count][`body`]}</p>`;
     }
 }
 function failure_function(error) {
